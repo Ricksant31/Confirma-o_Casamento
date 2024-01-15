@@ -25,7 +25,7 @@ form {
 
         body {
             background-image: url(Cartão\ de\ obrigado\ pela\ compra\ delicado\ documento\ A4.jpg);
-            padding: 15px;
+            padding: 100px;
             text-align: center;
             
         }
@@ -92,9 +92,10 @@ form {
             </div>
       </center><br>
         <fieldset>
-          <legend> Quantidade de dependes (incluindo filhos): </legend>
+          <legend> Quantidade de dependentes (incluindo filhos): </legend>
             <label for="dependentes"> Dependentes: </label>  
             <select id="dependentes" name="dependentes" >
+              <option value="0">Não possuo</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -104,27 +105,30 @@ form {
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-              <option value="10+">10</option>
+              <option value="10+">10+</option>
             </select>
         </fieldset>
         <p></p>
         <fieldset>
         <legend> Grau de escolaridade:<legend>
           <label for="serie">Série:</label>
-          <select name="serie" id="serie">
-              <optgroup label="Serie">
-                <option value="infantil">Infantil</option>
-                <option value="fundamental 1">Fundamental 1 ( 1° ao 5° ano)</option>
-                <option value="fundamental 2">Fundamental 2 (6° ao 9°)</option>
-                <option value="ensino medio">Ensino medio incompleto</option>
-                <option value="ensino medio">Ensino medio completo</option>
-                <option value="ensino medio">Ensino Superior</option>
-              </optgroup>
+            <select name="serie" id="serie">
+                <optgroup label="Serie">
+                  <option value="nao frequentei">Não fui a escola</option>
+                  <option value="infantil">Infantil</option>
+                  <option value="fundamental 1">Fundamental 1 (1° ao 5°ano)</option>
+                  <option value="fundamental 2">Fundamental 2 (6° ao 9°ano)</option>
+                  <option value="ensino medioIN">Ensino medio incompleto</option>
+                  <option value="ensino medioCO">Ensino medio completo</option>
+                  <option value="ensino tecnicoIN">Ensino técnico incompleto</option>
+                  <option value="ensino tecnicoCO">Ensino técnico completo</option>
+                  <option value="ensino superiorIN">Ensino Superior incompleto</option>
+                  <option value="ensino superiorCO">Ensino Superior Completo</option>
+                </optgroup>
             </select>
             </fieldset>
         <hr>
         <fieldset>
-          <legend> Gênero:<legend>
             <label for="Gênero">Gênero:</label>
             <select name="Gênero" id="Gênero">
                 <optgroup label="Gênero">
@@ -136,7 +140,7 @@ form {
               </fieldset>
           <p></p>
             <fieldset>
-              <legend> Estado civil:<legend>
+            
                 <label for="civil">Estado civil:</label>
                 <select name="civil" id="civil">
                     <optgroup label="Estado civil">
@@ -349,6 +353,8 @@ form {
       <label for="formas-pagamento-credito">Crédito</label><br>
       <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-pix" value="pix">
       <label for="formas-pagamento-pix">Pix</label><br>
+      
+
 
   <button type="submit">Enviar</button>
       
