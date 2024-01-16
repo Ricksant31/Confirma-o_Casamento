@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
-<style> img{
+<style> 
+img{
   border: 1px solid #ddd;
   border-radius: 500px;
   padding: 5px;
@@ -26,7 +27,7 @@ form {
         body {
             background-image: url(Cartão\ de\ obrigado\ pela\ compra\ delicado\ documento\ A4.jpg);
             padding: 100px;
-            text-align: center;
+            text-align: left
             
         }
 
@@ -109,9 +110,9 @@ form {
             </select>
         </fieldset>
         <p></p>
-        <fieldset>
-        <legend> Grau de escolaridade:<legend>
-          <label for="serie">Série:</label>
+        <fieldset><br>
+          <legend> Grau de escolaridade:<legend>
+          <label for="serie"></label>
             <select name="serie" id="serie">
                 <optgroup label="Serie">
                   <option value="nao frequentei">Não fui a escola</option>
@@ -129,19 +130,21 @@ form {
             </fieldset>
         <hr>
         <fieldset>
-            <label for="Gênero">Gênero:</label>
+          <Legend>Gênero:</Legend>
+            <label for="Gênero"></label>
             <select name="Gênero" id="Gênero">
                 <optgroup label="Gênero">
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
-                  <option value="Outro/Prefiro não informar">Outro/Prefiro não informarFeminino</option>
+                  <option value="Outro/Prefiro não informar">Outro</option>
+                  <option value="Outro/Prefiro não informar">Prefiro não informar</option>
                 </optgroup>
               </select>
               </fieldset>
           <p></p>
             <fieldset>
-            
-                <label for="civil">Estado civil:</label>
+              <Legend>Estado civil:</Legend>
+                <label for="civil"></label>
                 <select name="civil" id="civil">
                     <optgroup label="Estado civil">
                       <option value="Solteiro(a)">Solteiro(a)</option>
@@ -163,11 +166,7 @@ form {
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10+">10</option>
+
           </select>
           
       </fieldset>
@@ -246,7 +245,7 @@ form {
         <input type="radio" id="rendaExtra" name="rendaExtra" value="sim">
         <label for="rendaExtra_sim">Sim</label>
         <input type="radio" id="rendaExtra" name="rendaExtra" value="não">
-      
+        <label for="rendaExtra_não">Não</label>
         </fieldset>
         <p></p>
         <fieldset>
@@ -307,6 +306,7 @@ form {
           <legend> Você possui alguma dívida pendente? </legend>
         <label for="divida"></label>
         <select id="divida" name="divida" required>
+          <option value="0">Não possuo</option>
           <option value="1">500-1000</option>
           <option value="2">1000-5000</option>
           <option value="3">5000-10000</option>
@@ -348,12 +348,15 @@ form {
         <legend> Seu estabelecimento aceita quais formas de pagamentos: </legend>
         <label for="formas-pagmento"></label><br>
       <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-debito" value="debito">
-      <label for="formas-pagamento-debito">Débito</label><br>
+      <label for="formas-pagamento-debito">Cartão de Débito</label><br>
       <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-credito" value="credito">
-      <label for="formas-pagamento-credito">Crédito</label><br>
+      <label for="formas-pagamento-credito">Cartão de Crédito</label><br>
       <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-pix" value="pix">
       <label for="formas-pagamento-pix">Pix</label><br>
+      <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-Avista" value="Avista">
+      <label for="formas-pagamento-Avista">Dinheiro</label><br>
       
+
 
 
   <button type="submit">Enviar</button>
