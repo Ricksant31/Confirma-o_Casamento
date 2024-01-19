@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
 <style> 
-img{
+#Logo_econo{
   border: 1px solid #ddd;
   border-radius: 500px;
   padding: 5px;
   width: 150px;
 
 }
+#Marcar_final{
+  padding: 0%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+fieldset{
+  border-radius: 10px;
+}
+
 
 form {
   max-width: 400px;
@@ -25,9 +39,10 @@ form {
 
 
         body {
-            background-image: url(Cartão\ de\ obrigado\ pela\ compra\ delicado\ documento\ A4.jpg);
-            padding: 100px;
-            text-align: left
+            background-image: url(fundo\ Site\ .png);
+            background-size: contain;
+            padding: 10px;
+            text-align: center;   
             
         }
 
@@ -36,7 +51,7 @@ form {
             padding: 6px 12px;
             border-radius: 12px;
             cursor: pointer;
-            background-color: #e9daad; 
+            background-color: #f6eccf; 
             color: black; 
             border: 2px solid #04AA6D;
         }
@@ -44,6 +59,9 @@ form {
         button:hover {
             background-color: #04AA6D;
             color: white;
+        }
+        div{
+          border-radius: 10px;
         }
         
         #myForm {
@@ -67,10 +85,45 @@ form {
       </style>
 </head>
 <body>
-<h1>Formulário de Perguntas</h1>
-<form action="https://api.sheetmonkey.io/form/4YmoR5EYr2xLxj3ec6VjHs" method="post" target="_blank">
+<br><br>
+<form id="Econo+" action="https://api.sheetmonkey.io/form/4YmoR5EYr2xLxj3ec6VjHs" method="post">
+  <!-- Seus campos de formulário aqui -->
+
+
+<script>
+document.getElementById('Econo+').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
   
-  <img src="Design sem nome.png" alt="Design" height="150" width="150">
+  // Aqui você pode adicionar uma chamada AJAX para enviar os dados do formulário
+  // Por exemplo, usando o objeto FormData e a API Fetch:
+  var formData = new FormData(this);
+  
+  fetch(this.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Se o envio foi bem-sucedido, resete o formulário
+      this.reset();
+      // Ou redirecione a página para si mesma para recarregar
+      // window.location.href = window.location.href;
+      document.getElementById('confirmationPopup').style.display = 'flex';
+    } else {
+      // Trate erros de resposta aqui
+      alert('Ocorreu um erro ao enviar o formulário.');
+    }
+  })
+  .catch(error => {
+    // Trate erros de rede aqui
+    alert('Formulario enviado.');
+  });
+});
+</script>
+
+  
+  <img id= "Logo_econo" src="Design sem nome (1).png" alt="Design" height="150" width="150">
+  
   <h1>Formulário Econo+</H1>
       <center>
           <div style="border: 1px solid black; padding: 8px; margin: 8px;">
@@ -78,7 +131,8 @@ form {
               <h2>Nos ajude a realizar uma pesquisa de perfil financeiro</h2>
               <h4>A Lei Geral de Proteção de Dados  - nº 13.709, de 14 de agosto de 2018 dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural.</h4>
           </div>
-          <hr>
+          <br>
+          
           <div style="border: 1px solid black; padding: 8px; margin: 8px;">
                    
         <div>
@@ -88,29 +142,32 @@ form {
             <input type="text" id="nome" name="nome" > <br>
             <label for="Telefone">Caso confortavel, informe o seu telefone</label>
             <input type="tel" id="telefone" name="telefone"> <br>
-            <label for="Email">Caso confortavel, informe o seu E-mail:</label>
+            <label for="Email">Caso confortavel, informe o seu e-mail:</label>
             <input type="email" id="email" name="email"> <br>
+            <label for="idade">Caso confortavel, informe o sua idade:</label>
+            <input type="idade" id="idade" name="idade" size="1"> <br><br>
             </div>
       </center><br>
+      <fieldset>
+        <Legend>Você é:</Legend>
+          <label for="Pessoa"></label>
+          <select name="pessoa" id="Pessoa">
+              <optgroup label="Tipo Pessoa">
+                <option value="jurídica">Microempreendedor</option>
+                <option value="Fisica">Funcionário</option>
+                
+              </optgroup>
+            </select>
+            </fieldset>
+            <br>
         <fieldset>
           <legend> Quantidade de dependentes (incluindo filhos): </legend>
-            <label for="dependentes"> Dependentes: </label>  
-            <select id="dependentes" name="dependentes" >
-              <option value="0">Não possuo</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10+">10+</option>
-            </select>
+            <label for="dependentes"></label>  
+            <input type="number"  id="dependentes" name="dependentes" 
+            min = "0">
         </fieldset>
         <p></p>
-        <fieldset><br>
+        <fieldset>
           <legend> Grau de escolaridade:<legend>
           <label for="serie"></label>
             <select name="serie" id="serie">
@@ -119,16 +176,16 @@ form {
                   <option value="infantil">Infantil</option>
                   <option value="fundamental 1">Fundamental 1 (1° ao 5°ano)</option>
                   <option value="fundamental 2">Fundamental 2 (6° ao 9°ano)</option>
-                  <option value="ensino medioIN">Ensino medio incompleto</option>
-                  <option value="ensino medioCO">Ensino medio completo</option>
-                  <option value="ensino tecnicoIN">Ensino técnico incompleto</option>
-                  <option value="ensino tecnicoCO">Ensino técnico completo</option>
-                  <option value="ensino superiorIN">Ensino Superior incompleto</option>
-                  <option value="ensino superiorCO">Ensino Superior Completo</option>
+                  <option value="ensino medio IN.">Ensino medio incompleto</option>
+                  <option value="ensino medio CO.">Ensino medio completo</option>
+                  <option value="ensino tecnico IN.">Ensino técnico incompleto</option>
+                  <option value="ensino tecnico CO.">Ensino técnico completo</option>
+                  <option value="ensino superior IN.">Ensino Superior incompleto</option>
+                  <option value="ensino superior CO.">Ensino Superior Completo</option>
                 </optgroup>
             </select>
             </fieldset>
-        <hr>
+      <br>
         <fieldset>
           <Legend>Gênero:</Legend>
             <label for="Gênero"></label>
@@ -159,60 +216,96 @@ form {
         <p></p>
         <fieldset>
           <legend>Quantas pessoas moram na sua casa? </legend>
-          <label for="moradores">Número de pessoas:</label>
-          <select id="moradores" name="moradores" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+          <label for="moradores"></label>
+          <input type="number" id="moradores" name="moradores" required
+          min = "1">
+          
 
-          </select>
+          
           
       </fieldset>
       
         <p></p>
       
        <fieldset>
-          <legend>Qual a sua renda fixa?</legend>
+          <legend>Qual a sua renda mensal aproximadamente?</legend>
+
           <label>
-              <input type="radio" name="rendaFixa" value="1 Salário mínimo" required>
-              1 Salário mínimo
+            
+            <input type="radio" name="rendaFixa" value="800">
+            Menos de 1 Salário mínimo
+        </label><br>
+          <label>
+
+              <input type="radio" name="rendaFixa" value="1420">
+              Em torno de 1 Salário mínimo
           </label><br>
           <label>
-              <input type="radio" name="rendaFixa" value="2 - 3 Salários mínimos">
-              2 - 3 Salários mínimos
+              <input type="radio" name="rendaFixa" value="2840">
+              Em torno de 2 Salários mínimos
           </label><br>
           <label>
-              <input type="radio" name="rendaFixa" value="3 - 5 Salários mínimos">
-              3 - 5 Salários mínimos
+              <input type="radio" name="rendaFixa" value="4260">
+              Em torno de 3 Salários mínimos
           </label><br>
           <label>
-              <input type="radio" name="rendaFixa" value="Mais de 6 Salários mínimos">
+            <input type="radio" name="rendaFixa" value="5680">
+            Em torno de 4 Salários mínimos
+          </label><br>
+         <label>
+          <input type="radio" name="rendaFixa" value="7100">
+          Em torno de 5 Salários mínimos
+          </label><br>
+          <label>
+              <input type="radio" name="rendaFixa" value="8520">
               Mais de 6 Salários mínimos
           </label><br>
       </fieldset>
       
       
         <p></p>
-        <fieldset>
+        <fieldset id="investFild">
         <legend>Você faz algum tipo de investimento?</legend>
-        <label for="tipo_investimento">Tipo de investimento:</label> <br>
+        <label for="tipo_investimento"></label> <br> 
+
+        <label for="investimento_poupanca"> 
+        <input type="checkbox" name="investimento" value="Não investe">
+        Não faço nenhum tipo de investimento</label><br>
+
+       
+        <label for="investimento_poupanca"> 
         <input type="checkbox" name="investimento" value="Caderneta de Poupança"> 
-        <label for="investimento_poupanca">Caderneta de Poupança</label><br>
+        Caderneta de Poupança</label><br>
+
+        
+        <label for="investimento_cli">
         <input type="checkbox" name="investimento" value="CLI">
-        <label for="investimento_cli">Letra de Crédito Imobiliário (LCI)</label><br>
+        Letra de Crédito Imobiliário (LCI)</label><br>
+
+        
+        <label for="investimento_cdb">
         <input type="checkbox" name="investimento" value="CDB">
-        <label for="investimento_cdb">Certificado de Depósito Bancário (CDB)</label><br>
+        Certificado de Depósito Bancário (CDB)</label><br>
+
+        
+        <label for="investimento_Tesourodireto">
         <input type="checkbox" name="investimento" value="Tesouro direto">
-        <label for="investimento_Tesourodireto">Tesouro direto</label><br>
+        Tesouro direto</label><br>
+
+        
+        <label for="investimento_fundos">
         <input type="checkbox" name="investimento" value="Fundos imobiliarios">
-        <label for="investimento_fundos">Fundos Imobiliarios</label><br>
+        Fundos Imobiliários</label><br>
+        
+        
+        <label for="investimento_Ações">
         <input type="checkbox" name="investimento" value="Ações">
-        <label for="investimento_Ações">Ações</label><br>
+        Ações</label><br>
       
+        
+        <label for="investimento_outros">
         <input type="checkbox" name="investimento" value="Outros">
-        <label for="investimento_outros">Outros</label><br>
+        Outros</label><br>
         
       <!--oiiii-->
           <!-- Adicione mais opções de investimento conforme necessário -->
@@ -231,7 +324,7 @@ form {
         </fieldset>
         <p></p>
         <fieldset>
-        <legend>Você tem planejamento dos seus gastos?</legend>
+        <legend>Você tem planejamento dos seus gastos pessoais?</legend>
         <label for="conscienciaGastos"></label>
           <input type="radio" name="conscienciaGastos" value="Sim">
           <label for="conscienciaGastos_sim">Sim</label>
@@ -239,15 +332,7 @@ form {
           <label for="conscienciaGastos_nao">Não</label>
         </fieldset>
         <p></p>
-        <fieldset>
-          <legend>Você possui uma renda extra, como revendas, entre outros?</legend>
-        <label for="rendaExtra"></label>
-        <input type="radio" id="rendaExtra" name="rendaExtra" value="sim">
-        <label for="rendaExtra_sim">Sim</label>
-        <input type="radio" id="rendaExtra" name="rendaExtra" value="não">
-        <label for="rendaExtra_não">Não</label>
-        </fieldset>
-        <p></p>
+      
         <fieldset>
           <legend> Você possui alguma reserva finaceira de emergencia?</legend>
         <label for="reservaEmergencia"></label>
@@ -260,58 +345,56 @@ form {
         <p></p>
       
         <fieldset>
-        <legend>Qual tipo de comércio você atua?</legend>
-        <label for="tipoComercio">Tipo de comércio:</label> <br>
-        <input type="checkbox" id="tipoComercio" name="tipoComercio" value="Roupas">
-        <label for="tipoComercio">Roupas</label> <br>
-        <input type="checkbox" id="tipoComercio" name="tipoComercio" value="Calçados">
-        <label for="tipoComercio">Calçados</label> <br>
-        <input type="checkbox" id="tipoComercio" name="tipoComercio" value="Eletronicos">
-        <label for="tipoComercio">Eletronicos</label> <br>
-        <input type="checkbox" id="tipoComercio" name="tipoComercio" value="Outros">
+        <legend>Qual setor você atua?</legend>
+        <label for="tipoComercio"></label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Comercio">
+        <label for="tipoComercio">Comercio</label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Saúde">
+        <label for="tipoComercio">Saúde</label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Administrativo">
+        <label for="tipoComercio">Administrativo</label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Jovem Aprendiz">
+        <label for="tipoComercio">Jovem Aprendiz</label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Educação">
+        <label for="tipoComercio">Educação</label> <br>
+        <input type="radio" id="tipoComercio" name="tipoComercio" value="Outros">
         <label for="tipoComercio">Outros</label> <br>
         <p></p>
       
       </fieldset>
       <p></p>
-      <fieldset>
-      <legend>Você controla os gastos do seu comércio como entrada e saída de mercadorias? </legend>
-        <label for="controlaGastosComercio">Gastos do seu comércio:</label>
-          <input type="radio" name="controlaGastosComercio" value="Sim">
-          <label for="controlaGastosComercio_sim">Sim</label>
-          <input type="radio" name="controlaGastosComercio" value="Não">
-          <label for="controlaGastosComercio_nao">Não</label>
-        </fieldset>
-        <p></p>
       
         <fieldset>
           <legend> Você possui quantos cartões de crédito? </legend>
-        <label for="qtdCartoesCredito">Numero de cartões de crédito:</label>
+        <label for="qtdCartoesCredito"></label>
       
-          <input type="radio" name="qtdCartoesCredito" value="0">
-          <label for="qtdCartoesCredito_0">Não possuo</label>
-          <input type="radio" name="qtdCartoesCredito" value="1-2">
-          <label for="qtdCartoesCredito_1-2">1 a 2</label>
-          <input type="radio" name="qtdCartoesCredito" value="3-5">
-          <label for="qtdCartoesCredito_3-5">3 a 5</label>
-          <input type="radio" name="qtdCartoesCredito" value="6-9">
-          <label for="qtdCartoesCredito_6-9">6 a 9</label>
-          <input type="radio" name="qtdCartoesCredito" value="Mais de 10">
-          <label for="qtdCartoesCredito_mais10">Mais de 10</label>
+          <input type="number" name="qtdCartoesCredito" value="0"
+          min = "0" max = "20">
+          
+          
         </fieldset>
         <p></p>
-      
-      
         <fieldset>
-          <legend> Você possui alguma dívida pendente? </legend>
+          <legend> Quais formas de pagamento você mais costuma usar? </legend>
+          <label for="formas-pagmento"></label><br>
+        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-debito" value="debito">
+        <label for="formas-pagamento">Cartão de Débito</label><br>
+        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-credito" value="credito">
+        <label for="formas-pagamento">Cartão de Crédito</label><br>
+        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-pix" value="pix">
+        <label for="formas-pagamento">Pix</label><br>
+        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-Avista" value="Avista">
+        <label for="formas-pagamento">Dinheiro</label><br>
+        
+        </fieldset>
+        <p></p>
+
+        <fieldset>
+          <legend> Você gostaria de compartilhar uma estimativa do valor total de suas dividas?</legend>
         <label for="divida"></label>
-        <select id="divida" name="divida" required>
-          <option value="0">Não possuo</option>
-          <option value="1">500-1000</option>
-          <option value="2">1000-5000</option>
-          <option value="3">5000-10000</option>
-          <option value="4">10000+</option>
-        </select>
+        <input type="number" id="divida" name="divida" required
+        min = "0">
+        
       </fieldset>
       <p></p>
       
@@ -322,10 +405,12 @@ form {
         <label for="Impulsos_sim">Sim</label>
         <input type="radio" name="Impulsos" value="Não">
         <label for="Impulsos_nao">Não</label>
+        <input type="radio" name="Impulsos" value="As vezes">
+        <label for="Impulsos_as_vezes">Às vezes</label>
       </fieldset>
       <p></p>
       <fieldset>
-        <legend>Você normalmente gasta muito com... </legend>
+        <legend>Com qual destes ítens você gasta mais? </legend>
         <label for="gastos"></label>
       <input type="checkbox" name="gastos[]" id="gastos-compras-online" value="compras-online">
       <label for="gastos-compras-online">Compras online</label> <br>
@@ -341,30 +426,18 @@ form {
       <label for="gastos-outros">Outros</label><br>
       
       </fieldset>
-      <p></p>
+     
       
-      
-      <fieldset>
-        <legend> Seu estabelecimento aceita quais formas de pagamentos: </legend>
-        <label for="formas-pagmento"></label><br>
-      <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-debito" value="debito">
-      <label for="formas-pagamento-debito">Cartão de Débito</label><br>
-      <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-credito" value="credito">
-      <label for="formas-pagamento-credito">Cartão de Crédito</label><br>
-      <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-pix" value="pix">
-      <label for="formas-pagamento-pix">Pix</label><br>
-      <input type="checkbox" name="formas-pagamento[]" id="formas-pagamento-Avista" value="Avista">
-      <label for="formas-pagamento-Avista">Dinheiro</label><br>
-      
-
+      <br><br>
 
 
   <button type="submit">Enviar</button>
-      
-  
 
 </form>
 
+<background-image>
+  <img id="Marca final" src="Logo_econo+-removebg-preview.png" alt="Marca" height="450" width="450">
+</background-image>
+
 </body>
 </html>
-
