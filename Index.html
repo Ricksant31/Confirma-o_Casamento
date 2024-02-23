@@ -3,30 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Confirmação de presença</title>
 <style> 
-#Logo_econo{
-  border: 1px solid #ddd;
-  border-radius: 500px;
-  padding: 5px;
-  width: 150px;
+#LogoInicial{
+  border: 0px solid #ddd;
+  border-radius: 100px;
+  border-bottom: 100px;
+  padding: 1px;
+  width: 300px;
+  
 
 }
-#Marcar_final{
-  padding: 0%;
+.p1{
+  font-size: 65px;
+  font-style: italic;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
 }
-img{
-  max-width: 100%;
-  height: auto;
-}
+
 fieldset{
   border-radius: 10px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 form {
   max-width: 400px;
@@ -37,9 +42,14 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
 
         body {
-            background-image: url(fundo\ Site\ .png);
+            background-image: url(fundo_inicial-removebg-preview.png);
+            background-color: cornflowerblue;
             background-size: contain;
             padding: 10px;
             text-align: center;   
@@ -53,11 +63,11 @@ form {
             cursor: pointer;
             background-color: #f6eccf; 
             color: black; 
-            border: 2px solid #04AA6D;
+            border: 2px solid #0457aa;
         }
 
         button:hover {
-            background-color: #04AA6D;
+            background-color: #1085f9;
             color: white;
         }
         div{
@@ -67,7 +77,7 @@ form {
         #myForm {
             max-width: 400px; /* Largura máxima do contêiner do formulário */
             margin: 50px auto; /* Centralizar o contêiner na página */
-            background-color: #ffffff23; /* Cor de fundo do contêiner do formulário */
+            background-color: #14131323; /* Cor de fundo do contêiner do formulário */
             padding: 20px; /* Espaçamento interno dentro do contêiner do formulário */
             border-radius: 10px; /* Borda arredondada do contêiner do formulário */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -86,12 +96,12 @@ form {
 </head>
 <body>
 <br><br>
-<form id="Econo+" action="https://api.sheetmonkey.io/form/4YmoR5EYr2xLxj3ec6VjHs" method="post">
+<form id="Henrique_e_Tais" action="https://api.sheetmonkey.io/form/dzXpxxYrQfJM2U8KEVY5hq" method="post">
   <!-- Seus campos de formulário aqui -->
 
 
 <script>
-document.getElementById('Econo+').addEventListener('submit', function(event) {
+document.getElementById('Henrique_e_Tais').addEventListener('submit', function(event) {
   event.preventDefault(); // Impede o envio padrão do formulário
   
   // Aqui você pode adicionar uma chamada AJAX para enviar os dados do formulário
@@ -122,322 +132,64 @@ document.getElementById('Econo+').addEventListener('submit', function(event) {
 </script>
 
   
-  <img id= "Logo_econo" src="Design sem nome (1).png" alt="Design" height="150" width="150">
   
-  <h1>Formulário Econo+</H1>
+  
+  <h1>Confirmação de presença
+  </H1>
       <center>
           <div style="border: 1px solid black; padding: 8px; margin: 8px;">
               
-              <h2>Nos ajude a realizar uma pesquisa de perfil financeiro</h2>
-              <h4>A Lei Geral de Proteção de Dados  - nº 13.709, de 14 de agosto de 2018 dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural.</h4>
-          </div>
+              <h2>Nos ajude a confirmar sua presença no nosso casamento</h2>
+              </div>
           <br>
           
           <div style="border: 1px solid black; padding: 8px; margin: 8px;">
                    
         <div>
           
-            <h2>Campo não obrigatório</h2>
-            <label for="nome">Caso confortavel, informe o seu nome:</label>
-            <input type="text" id="nome" name="nome" > <br>
-            <label for="Telefone">Caso confortavel, informe o seu telefone</label>
-            <input type="tel" id="telefone" name="telefone"> <br>
-            <label for="Email">Caso confortavel, informe o seu e-mail:</label>
-            <input type="email" id="email" name="email"> <br>
-            <label for="idade">Caso confortavel, informe o sua idade:</label>
-            <input type="idade" id="idade" name="idade" size="1"> <br><br>
+            <label for="nome">Nome Completo:</label>
+            <input type="" name="Nome do Convidado">
             </div>
       </center><br>
-      <fieldset>
-        <Legend>Você é:</Legend>
-          <label for="Pessoa"></label>
-          <select name="pessoa" id="Pessoa">
-              <optgroup label="Tipo Pessoa">
-                <option value="jurídica">Microempreendedor</option>
-                <option value="Fisica">Funcionário</option>
-                
-              </optgroup>
-            </select>
-            </fieldset>
-            <br>
+
         <fieldset>
-          <legend> Quantidade de dependentes (incluindo filhos): </legend>
-            <label for="dependentes"></label>  
-            <input type="number"  id="dependentes" name="dependentes" 
-            min = "0">
+          <legend> Você confirma que estará presente em nosso casamento?</legend>
+        <label for="confimação de Presença"></label>
+          <input type="radio" name="confimaçãoPresença" value="Sim">
+          <label for="confimaçãoPresença_sim">Sim</label>
+          <input type="radio" name="confimaçãoPresença" value="Não">
+          <label for="confimaçãoPresença_nao">Não</label>
         </fieldset>
         <p></p>
         <fieldset>
-          <legend> Grau de escolaridade:<legend>
-          <label for="serie"></label>
-            <select name="serie" id="serie">
-                <optgroup label="Serie">
-                  <option value="nao frequentei">Não fui a escola</option>
-                  <option value="infantil">Infantil</option>
-                  <option value="fundamental 1">Fundamental 1 (1° ao 5°ano)</option>
-                  <option value="fundamental 2">Fundamental 2 (6° ao 9°ano)</option>
-                  <option value="ensino medio IN.">Ensino medio incompleto</option>
-                  <option value="ensino medio CO.">Ensino medio completo</option>
-                  <option value="ensino tecnico IN.">Ensino técnico incompleto</option>
-                  <option value="ensino tecnico CO.">Ensino técnico completo</option>
-                  <option value="ensino superior IN.">Ensino Superior incompleto</option>
-                  <option value="ensino superior CO.">Ensino Superior Completo</option>
-                </optgroup>
-            </select>
-            </fieldset>
-      <br>
-        <fieldset>
-          <Legend>Gênero:</Legend>
-            <label for="Gênero"></label>
-            <select name="Gênero" id="Gênero">
-                <optgroup label="Gênero">
-                  <option value="Masculino">Masculino</option>
-                  <option value="Feminino">Feminino</option>
-                  <option value="Outro/Prefiro não informar">Outro</option>
-                  <option value="Outro/Prefiro não informar">Prefiro não informar</option>
-                </optgroup>
-              </select>
-              </fieldset>
-          <p></p>
-            <fieldset>
-              <Legend>Estado civil:</Legend>
-                <label for="civil"></label>
-                <select name="civil" id="civil">
-                    <optgroup label="Estado civil">
-                      <option value="Solteiro(a)">Solteiro(a)</option>
-                      <option value="Casado(a)">Casado(a)</option>
-                      <option value="Divorciado(a)">Divorciado(a)</option>
-                      <option value="Viuvo(a)">Viuvo(a)</option>
-                    </optgroup>
-                  </select>
-                  </fieldset>
-                  <p></p>
-      
-        <p></p>
-        <fieldset>
-          <legend>Quantas pessoas moram na sua casa? </legend>
-          <label for="moradores"></label>
-          <input type="number" id="moradores" name="moradores" required
-          min = "1">
-          
-
-          
-          
-      </fieldset>
-      
-        <p></p>
-      
-       <fieldset>
-          <legend>Qual a sua renda mensal aproximadamente?</legend>
-
-          <label>
-            
-            <input type="radio" name="rendaFixa" value="800">
-            Menos de 1 Salário mínimo
-        </label><br>
-          <label>
-
-              <input type="radio" name="rendaFixa" value="1420">
-              Em torno de 1 Salário mínimo
-          </label><br>
-          <label>
-              <input type="radio" name="rendaFixa" value="2840">
-              Em torno de 2 Salários mínimos
-          </label><br>
-          <label>
-              <input type="radio" name="rendaFixa" value="4260">
-              Em torno de 3 Salários mínimos
-          </label><br>
-          <label>
-            <input type="radio" name="rendaFixa" value="5680">
-            Em torno de 4 Salários mínimos
-          </label><br>
-         <label>
-          <input type="radio" name="rendaFixa" value="7100">
-          Em torno de 5 Salários mínimos
-          </label><br>
-          <label>
-              <input type="radio" name="rendaFixa" value="8520">
-              Mais de 6 Salários mínimos
-          </label><br>
-      </fieldset>
-      
-      
-        <p></p>
-        <fieldset id="investFild">
-        <legend>Você faz algum tipo de investimento?</legend>
-        <label for="tipo_investimento"></label> <br> 
-
-        <label for="investimento_poupanca"> 
-        <input type="checkbox" name="investimento" value="Não investe">
-        Não faço nenhum tipo de investimento</label><br>
-
-       
-        <label for="investimento_poupanca"> 
-        <input type="checkbox" name="investimento" value="Caderneta de Poupança"> 
-        Caderneta de Poupança</label><br>
-
-        
-        <label for="investimento_cli">
-        <input type="checkbox" name="investimento" value="CLI">
-        Letra de Crédito Imobiliário (LCI)</label><br>
-
-        
-        <label for="investimento_cdb">
-        <input type="checkbox" name="investimento" value="CDB">
-        Certificado de Depósito Bancário (CDB)</label><br>
-
-        
-        <label for="investimento_Tesourodireto">
-        <input type="checkbox" name="investimento" value="Tesouro direto">
-        Tesouro direto</label><br>
-
-        
-        <label for="investimento_fundos">
-        <input type="checkbox" name="investimento" value="Fundos imobiliarios">
-        Fundos Imobiliários</label><br>
-        
-        
-        <label for="investimento_Ações">
-        <input type="checkbox" name="investimento" value="Ações">
-        Ações</label><br>
-      
-        
-        <label for="investimento_outros">
-        <input type="checkbox" name="investimento" value="Outros">
-        Outros</label><br>
-        
-      <!--oiiii-->
-          <!-- Adicione mais opções de investimento conforme necessário -->
+          <legend> presencial ou pelo zoom?</legend>
+        <label for="Estilo de Presença"></label>
+          <input type="radio" name="modopresença" value="Presencial">
+          <label for="modopresença_Presencial">Presencial</label>
+          <input type="radio" name="modopresença" value="Zoom">
+          <label for="modopresença_Zoom">Zoom</label>
         </fieldset>
         <p></p>
         <fieldset>
-        <p></p>
-        <legend>Como você se avalia em termos de saúde financeira? </legend>
-        <label for="saudeFinanceira"></label>
-          <input type="radio" name="saudeFinanceira" value="Ruim">
-          <label for="saudeFinanceira_ruim">Ruim</label> 
-          <input type="radio" name="saudeFinanceira" value="Regular">
-          <label for="saudeFinanceira_regular">Regular</label>
-          <input type="radio" name="saudeFinanceira" value="Bom">
-          <label for="saudeFinanceira_bom">Bom</label>
+          <legend> Vem de Qual cidade?</legend>
+        <label for="Cidade"></label>
+          <input type="radio" name="Cidade" value="Caldeirão Grande">
+          <label for="Cidade_Escolhida">Caldeirão Grande</label>
+          <input type="radio" name="Cidade" value="Camaçari">
+          <label for="Cidade_Escolhida">Camaçari</label>
+          <input type="radio" name="Cidade" value="Outra">
+          <label for="Cidade_Escolhida">Outra</label>
         </fieldset>
         <p></p>
-        <fieldset>
-        <legend>Você tem planejamento dos seus gastos pessoais?</legend>
-        <label for="conscienciaGastos"></label>
-          <input type="radio" name="conscienciaGastos" value="Sim">
-          <label for="conscienciaGastos_sim">Sim</label>
-          <input type="radio" name="conscienciaGastos" value="Não">
-          <label for="conscienciaGastos_nao">Não</label>
-        </fieldset>
-        <p></p>
-      
-        <fieldset>
-          <legend> Você possui alguma reserva finaceira de emergencia?</legend>
-        <label for="reservaEmergencia"></label>
-          <input type="radio" name="reservaEmergencia" value="Sim">
-          <label for="reservaEmergencia_sim">Sim</label>
-          <input type="radio" name="reservaEmergencia" value="Não">
-          <label for="reservaEmergencia_nao">Não</label>
-        </fieldset>
-      
-        <p></p>
-      
-        <fieldset>
-        <legend>Qual setor você atua?</legend>
-        <label for="tipoComercio"></label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Comercio">
-        <label for="tipoComercio">Comercio</label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Saúde">
-        <label for="tipoComercio">Saúde</label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Administrativo">
-        <label for="tipoComercio">Administrativo</label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Jovem Aprendiz">
-        <label for="tipoComercio">Jovem Aprendiz</label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Educação">
-        <label for="tipoComercio">Educação</label> <br>
-        <input type="radio" id="tipoComercio" name="tipoComercio" value="Outros">
-        <label for="tipoComercio">Outros</label> <br>
-        <p></p>
-      
-      </fieldset>
-      <p></p>
-      
-        <fieldset>
-          <legend> Você possui quantos cartões de crédito? </legend>
-        <label for="qtdCartoesCredito"></label>
-      
-          <input type="number" name="qtdCartoesCredito" value="0"
-          min = "0" max = "20">
-          
-          
-        </fieldset>
-        <p></p>
-        <fieldset>
-          <legend> Quais formas de pagamento você mais costuma usar? </legend>
-          <label for="formas-pagmento"></label><br>
-        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-debito" value="debito">
-        <label for="formas-pagamento">Cartão de Débito</label><br>
-        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-credito" value="credito">
-        <label for="formas-pagamento">Cartão de Crédito</label><br>
-        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-pix" value="pix">
-        <label for="formas-pagamento">Pix</label><br>
-        <input type="radio" name="formas-pagamento[]" id="formas-pagamento-Avista" value="Avista">
-        <label for="formas-pagamento">Dinheiro</label><br>
-        
-        </fieldset>
-        <p></p>
-
-        <fieldset>
-          <legend> Você gostaria de compartilhar uma estimativa do valor total de suas dividas?</legend>
-        <label for="divida"></label>
-        <input type="number" id="divida" name="divida" required
-        min = "0">
-        
-      </fieldset>
-      <p></p>
-      
-      <fieldset>
-        <legend>Você costuma controlar seus impulsos ao sentir vontade de comprar?</legend>
-        <label for="Impulsos"></label>
-        <input type="radio" name="Impulsos" value="Sim">
-        <label for="Impulsos_sim">Sim</label>
-        <input type="radio" name="Impulsos" value="Não">
-        <label for="Impulsos_nao">Não</label>
-        <input type="radio" name="Impulsos" value="As vezes">
-        <label for="Impulsos_as_vezes">Às vezes</label>
-      </fieldset>
-      <p></p>
-      <fieldset>
-        <legend>Com qual destes ítens você gasta mais? </legend>
-        <label for="gastos"></label>
-      <input type="checkbox" name="gastos[]" id="gastos-compras-online" value="compras-online">
-      <label for="gastos-compras-online">Compras online</label> <br>
-      <input type="checkbox" name="gastos[]" id="gastos-festas" value="festas">
-      <label for="gastos-festas">Festas</label><br>
-      <input type="checkbox" name="gastos[]" id="gastos-viagens" value="viagens">
-      <label for="gastos-viagens">Viagens</label><br>
-      <input type="checkbox" name="gastos[]" id="gastos-comida" value="comida">
-      <label for="gastos-comida">Comida</label><br>
-      <input type="checkbox" name="gastos[]" id="gastos-jogos" value="jogos">
-      <label for="gastos-jogos">Jogos</label><br>
-      <input type="checkbox" name="gastos[]" id="gastos-outros" value="outros">
-      <label for="gastos-outros">Outros</label><br>
-      
-      </fieldset>
-     
       
       <br><br>
 
 
-  <button type="submit">Enviar</button>
+  <button type="submit">Confirmar</button>
 
 </form>
 
-<background-image>
-  <img id="Marca final" src="Logo_econo+-removebg-preview.png" alt="Marca" height="450" width="450">
-</background-image>
+<p class="p1">Henrique e Tais</p>
 
 </body>
 </html>
