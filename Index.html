@@ -133,7 +133,7 @@ document.getElementById('Henrique_e_Tais').addEventListener('submit', function(e
 </script>
 
   
-  <h2>Só poderá confirmar Presença até o dia 05 de Março</h2>
+  <h2>Não temos mais vagas para assistir o casamento presencial, a partir do dia 06 de março só temos vaga pelo zoom</h2>
   
   <h1>Confirmação de presença
   </H1>
@@ -149,25 +149,23 @@ document.getElementById('Henrique_e_Tais').addEventListener('submit', function(e
         <div>
           
             <label for="nome">Nome Completo:</label>
-            <input type="" name="Nome do Convidado">
+            <input type="" name="Nome do Convidado" required>
             </div>
       </center><br>
 
         <fieldset>
-          <legend> Você confirma que estará presente em nosso casamento?</legend>
+          <legend> Você confirma que estará presente em nosso casamento?</legend> 
         <label for="confimação de Presença"></label>
-          <input type="radio" name="confimaçãoPresença" value="Sim">
+          <input type="radio" name="confimaçãoPresença" value="Sim" required>
           <label for="confimaçãoPresença_sim">Sim</label>
-          <input type="radio" name="confimaçãoPresença" value="Não">
+          <input type="radio" name="confimaçãoPresença" value="Não" required>
           <label for="confimaçãoPresença_nao">Não</label>
         </fieldset>
         <p></p>
         <fieldset>
           <legend> presencial ou pelo zoom?</legend>
         <label for="Estilo de Presença"></label>
-          <input type="radio" name="modopresença" value="Presencial">
-          <label for="modopresença_Presencial">Presencial</label>
-          <input type="radio" name="modopresença" value="Zoom">
+          <input type="radio" name="modopresença" value="Zoom" required>
           <label for="modopresença_Zoom">Zoom</label>
         </fieldset>
         <p></p>
